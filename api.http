@@ -4,10 +4,26 @@ GET http://127.0.0.1:8000/products/ HTTP/1.1
 
 POST http://127.0.0.1:8000/products/ HTTP/1.1
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwNTE1MTk0LCJpYXQiOjE3ODA1MTQ4OTQsImp0aSI6ImRiMTc5MDRjZDc5ZDQyYmE5NWRjZWVkYjc2NTYwY2FkIiwidXNlcl9pZCI6IjIifQ.XhfUoALSWa0dkFh8AhxmdnsMCGcbuLoQ7e6bPnC2sEs
 
 {
-    "name": "Television",
-    "price": 300.00,
+    "name": "Vison Pro",
+    "price": 500.00,
     "stock": 14,
     "description": "I love this TV"
 }
+
+###
+POST http://127.0.0.1:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "john-doe",
+    "password": "1234"
+}
+
+###
+
+GET http://127.0.0.1:8000/user-orders/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzgwNTE5MDEwLCJpYXQiOjE3ODA1MTg3MTAsImp0aSI6ImJjZDg2MTc1YzBlNDQwZDA4YmJhYjE3NjllNGNjMDc5IiwidXNlcl9pZCI6IjIifQ.YeIKud59U3wMQeaGfUYgBF8Jv6DB-HDxt85CnyyXFME
+
